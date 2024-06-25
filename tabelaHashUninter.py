@@ -58,7 +58,7 @@ class TabelaHash:
 
     def imprimir(self):
         for i in range(self.tam):
-            print(f"Posição {i}:", end="")
+            print(f"Posição {i}:\n", end="")
             if self.h[i].head is None:
                 print("None")
             else:
@@ -82,15 +82,15 @@ estados = [
 # Estado fictício
 estado_ficticio = ("JR", "José Rech")
 
-# Criando a tabela hash e inserindo estados
+# Criação da tabela hash e inserindo estados
 Teste = TabelaHash()
 for sigla, nome in estados:
     Teste.inserir(sigla, nome)
 
-# Inserindo o estado fictício na tabela hash
+# Para inserir o estado fictício na tabela hash
 Teste.inserir(estado_ficticio[0], estado_ficticio[1])
 
-# Programa principal interativo
+# Programa principal 
 while True:
     print('1 - Inserir na tabela hash')
     print('2 - Remover na tabela hash')
@@ -99,7 +99,7 @@ while True:
 
     op = int(input("Escolha uma opção: "))
     if op == 1:
-        chave = input('Digite a sigla de um estado: ')
+        chave = input('Digite a sigla do estado: ')
         dado = input('Digite o nome do estado: ')
         Teste.inserir(chave, dado)
     elif op == 2:
