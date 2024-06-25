@@ -33,10 +33,12 @@ def inserirComPrioridade(fila, nodo):
         while atual is not None and atual.cor != nodo.cor:
             anterior = atual
             atual = atual.proximo
-        if atual is not None:
-            nodo.proximo = atual
-            if anterior is not None:
-                anterior.proximo = nodo
+        if anterior is None:
+            nodo.proximo = fila.head
+            fila.head = nodo
+        else:
+            nodo.proximo = anterior.proximo
+            anterior.proximo = nodo
 
 
 # D - Criação da função inserir()
