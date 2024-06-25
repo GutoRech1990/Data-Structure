@@ -80,7 +80,7 @@ estados = [
 ]
 
 # Estado fictício
-estado_ficticio = ("JR", "José Rech")
+estado_ficticio = ("JR", "José Augusto Rech")
 
 # Criação da tabela hash e inserindo estados
 Teste = TabelaHash()
